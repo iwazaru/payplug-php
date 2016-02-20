@@ -41,9 +41,9 @@ if (version_compare(phpversion(), Config::PHP_MIN_VERSION, "<")) {
 
 // Check OpenSSL version
 // http://blog.techstacks.com/2013/04/an-openssl-version-matrix.html
-if (defined('OPENSSL_VERSION_NUMBER') && OPENSSL_VERSION_NUMBER < 0x10001001) {
+if (defined('OPENSSL_VERSION_NUMBER') && OPENSSL_VERSION_NUMBER < 0x009080ff) {
     throw new Exception\DependencyException(
-        'This library requires OpenSSL 1.0.1 or newer. Please contact your webhoster or update your OpenSSL version.'
+        'This library requires OpenSSL 0.9.8o or newer. Please contact your webhoster or update your OpenSSL version.'
     );
 }
 
